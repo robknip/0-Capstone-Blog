@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">R-Kane</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <div class="content-body">
+            <div class="hero">
+                <h1>This is part of the main section</h1>
+                <div class="hero-copy">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea ipsa, molestias rerum iste accusamus
+                        et
+                        fugiat minima rem cumque repellat necessitatibus reprehenderit eligendi distinctio quam? Dicta
+                        eius
+                        quo tempore, sed deleniti quaerat labore assumenda eum voluptate itaque! Id iusto omnis vitae,
+                        quisquam mollitia non sit labore repudiandae assumenda totam dolorem tenetur ullam eaque aut
+                        unde ut
+                        nam repellat. Voluptas est quisquam autem. Minus velit sed aliquam tempora in eligendi quidem
+                        recusandae, quos aspernatur adipisci esse, quasi reiciendis corporis! Numquam ea maiores soluta
+                        veritatis cum itaque, reprehenderit unde corrupti dolore voluptates sequi id sit molestiae
+                        facere,
+                        maxime quisquam doloribus! Accusantium, suscipit.</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form action="/submit" method="post">
+                    <div class=" outer-card">
+                        <div class="inner-card">
+                            <div class="inner-title">
+                                <div class="inner-title__first-row">
+                                    <div class="inner-title__date-divider"></div>
+                                    <div class="inner-title__date">
+                                        <p>Date</p>
+                                    </div>
+                                    <div class="inner-title__date-divider"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-body">
+                                <p>
+                                    <label for="title">Post title</label>
+                                    <input name="title" type="text" />
+                                </p>
+                                <p>
+                                    <label for="blog">Blog</label>
+                                    <textarea id="blog" name="blog" rows="4"></textarea>
+                                </p>
+                            </div>
+                            <div class="inner-footer">
+                                <div class="inner-footer__left">
+                                    <ul class="footer-list">
+                                        <li><button type="submit">Save</button></li>
+                                        <!-- <li> <img src="images/trash3.svg" alt="heart"></li> -->
+                                    </ul>
+
+                                </div>
+                                <div class="inner-footer__right">
+                                    <p>
+                                        Author:
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="post-list">
+
+
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <div class="inner-title">
+                            <div class="inner-title__first-row">
+                                <div class="inner-title__date-divider"></div>
+                                <div class="inner-title__date">
+                                    11/02/2023
+                                </div>
+                                <div class="inner-title__date-divider"></div>
+                            </div>
+                        </div>
+                        <p>
+                            Could this really be the case?
+                        </p>
+
+                        <div class="inner-body">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea ipsa, molestias rerum iste
+                                accusamus et fugiat minima rem cumque repellat necessitatibus reprehenderit eligendi
+                                distinctio quam? Dicta eius quo tempore, sed deleniti quaerat labore assumenda eum
+                                voluptate itaque! Id iusto omnis vitae, quisquam mollitia non sit labore repudiandae
+                                assumenda totam dolorem tenetur ullam eaque aut unde ut nam repellat. Voluptas est
+                                quisquam autem. Minus velit sed aliquam tempora in eligendi quidem recusandae, quos
+                                aspernatur adipisci esse, quasi reiciendis corporis! Numquam ea maiores soluta veritatis
+                                cum itaque, reprehenderit unde corrupti dolore voluptates sequi id sit molestiae facere,
+                                maxime quisquam doloribus! Accusantium, suscipit.
+                            </p>
+                        </div>
+                        <div class="inner-footer">
+                            <div class="inner-footer__left">
+                                <ul class="footer-list">
+                                    <li><button>Edit</button></li>
+                                    <li> <img src="images/heart.svg" alt="heart"></li>
+                                    <li> <img src="images/trash3.svg" alt="heart"></li>
+                                </ul>
+
+                            </div>
+                            <div class="inner-footer__right">
+                                <p>
+                                    Robert Knippel
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <div class="inner-title">
+                            <div class="inner-title__first-row">
+                                <div class="inner-title__date-divider"></div>
+                                <div class="inner-title__date">
+                                    11/02/2023
+                                </div>
+                                <div class="inner-title__date-divider"></div>
+                            </div>
+                        </div>
+                        <p>
+                            Here is title 2
+                        </p>
+
+                        <div class="inner-body">
+                            <p>
+                                Here is some lorem ipsum text number 2
+                            </p>
+                        </div>
+                        <div class="inner-footer">
+                            <div class="inner-footer__left">
+                                <ul class="footer-list">
+                                    <li><button>Edit</button></li>
+                                    <li> <img src="images/heart.svg" alt="heart"></li>
+                                    <li> <img src="images/trash3.svg" alt="heart"></li>
+                                </ul>
+
+                            </div>
+                            <div class="inner-footer__right">
+                                <p>
+                                    John Frost
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        </div>
+        <footer>
+            <div>
+                <p>Here is my footer text</p>
+            </div>
+        </footer>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

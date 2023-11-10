@@ -1,0 +1,57 @@
+<div class="form-container">
+    <form action="/submit" method="post">
+        <div class=" outer-card">
+            <div class="inner-card">
+                <div class="inner-title">
+                    <div class="inner-title__first-row">
+                        <div class="inner-title__date-divider"></div>
+                        <div class="inner-title__date">
+                            <p>
+                                <%= new Date().toLocaleString().split(',')[0] %>
+                            </p>
+                        </div>
+                        <div class="inner-title__date-divider"></div>
+                    </div>
+                </div>
+
+                <div class="form-body">
+                    <p>
+                        <label for="title">Post title</label>
+                        <input name="title" required type="text" />
+                    </p>
+                    <p>
+                        <label for="body">Blog</label>
+                        <textarea id="body" name="body" rows="4" required></textarea>
+                    </p>
+                    <p class="checkbox">
+                        <input type="checkbox" id="vehicle1" name="vehicle" value="Bike"><label for="vehicle1"> I have
+                            a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle" value="Car"><label for="vehicle2"> I have a
+                            car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle" value="Boat">
+                        <label for="vehicle3"> I have a boat</label>
+                    </p>
+                    <input name="author" type="text" value="Robert Knippel" />
+                    <input name="id" type="text" value="<%= Math.floor(Math.random() * 100000) %>" />
+                    <input name="date" type="text" value="<%= new Date().toLocaleString().split(',')[0] %>">
+                </div>
+                <div class="inner-footer">
+                    <div class="inner-footer__left">
+                        <ul class="footer-list">
+                            <li><button class="button-submit" type="submit">Save</button></li>
+                        </ul>
+                    </div>
+                    <div class="inner-footer__right">
+                        <p>
+                            Author:
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+</div>
