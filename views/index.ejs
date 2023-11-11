@@ -20,9 +20,10 @@
             </div>
 
             <div class="post-list">
-                <a href="/addblog.ejs">Enter Blog</a>
-
-                <%- include("partials/card.ejs") %>
+                <a href="/addblog">Enter Blog</a>
+                <% if(bList) { %>
+                    <% console.log(bList) %>
+                        <% } %>
             </div>
         </div>
 

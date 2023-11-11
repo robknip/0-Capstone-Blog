@@ -30,7 +30,7 @@ app.post('/submit', (req, res) => {
 
 app.post('/trash', (req, res) => {
     removePostObject(req)
-    res.render("index", { bList: blogList })
+    res.render("index.ejs", { bList: blogList })
 })
 
 app.listen(port, () => {

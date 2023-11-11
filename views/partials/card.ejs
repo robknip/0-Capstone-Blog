@@ -1,54 +1,47 @@
-<% if(bList.length>0) { %>
-    <% bList.forEach((blog)=>{ %>
-
-        <div class="outer-card">
-            <div class="inner-card">
-                <div class="inner-title">
-                    <div class="inner-title__first-row">
-                        <div class="inner-title__date-divider"></div>
-                        <div class="inner-title__date">
-                            <%= blog.date %>
-                        </div>
-                        <div class="inner-title__date-divider"></div>
-                    </div>
+<div class="outer-card">
+    <div class="inner-card">
+        <div class="inner-title">
+            <div class="inner-title__first-row">
+                <div class="inner-title__date-divider"></div>
+                <div class="inner-title__date">
+                    <%= blog.date %>
                 </div>
-                <p>
-                    <%= blog.title %>
-                </p>
+                <div class="inner-title__date-divider"></div>
+            </div>
+        </div>
+        <p>
+            <%= blog.title %>
+        </p>
 
-                <div class="inner-body">
-                    <p>
-                        <%= blog.body %>
-                    </p>
+        <div class="inner-body">
+            <p>
+                <%= blog.body %>
+            </p>
 
-                </div>
-                <div class="inner-footer">
-                    <div class="inner-footer__left">
-                        <!-- <form action="/trash" method="post"> -->
-                        <!-- <input type="hidden" name="id" value="<%=blog.id %>" />
+        </div>
+        <div class="inner-footer">
+            <div class="inner-footer__left">
+                <!-- <form action="/trash" method="post"> -->
+                <!-- <input type="hidden" name="id" value="<%=blog.id %>" />
                             <input type="hidden" name="author" value="<%=blog.author %>" />
                             <input type="hidden" name="body" value="<%=blog.body %>" />
                             <input type="hidden" name="date" value="<%=blog.date %>" /> -->
-                        <ul class="footer-list">
-                            <li><button class="button-edit" type="submit" id="<%=blog.id %>"
-                                    class="edit-button">Edit</button>
-                            </li>
-                            <li> <button class="button-heart"><img src="images/heart.svg" alt="heart"></button>
-                            </li>
-                            <li> <button type="submit" class="button-trash" value="<%=blog.id %>"><img
-                                        src="images/trash3.svg" alt="heart"></button></li>
-                        </ul>
-                        <!-- </form> -->
-                    </div>
-                    <div class="inner-footer__right">
-                        <p>
-                            <%= blog.author %>
-                        </p>
-                    </div>
-
-                </div>
+                <ul class="footer-list">
+                    <li><button class="button-edit" type="submit" id="<%=blog.id %>" class="edit-button">Edit</button>
+                    </li>
+                    <li> <button class="button-heart"><img src="images/heart.svg" alt="heart"></button>
+                    </li>
+                    <li> <button type="submit" class="button-trash" value="<%=blog.id %>"><img src="images/trash3.svg"
+                                alt="heart"></button></li>
+                </ul>
+                <!-- </form> -->
             </div>
-        </div>
+            <div class="inner-footer__right">
+                <p>
+                    <%= blog.author %>
+                </p>
+            </div>
 
-        <% }) %>
-            <% } %>
+        </div>
+    </div>
+</div>
