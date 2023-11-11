@@ -1,5 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 let blogList = []
 
@@ -16,18 +19,18 @@ app.get("/", (req, res) => {
 })
 
 app.get('/addblog', (req, res) => {
-    res.render('addblog.ejs', {})
+    res.render('addblog.ejs', { bList: [] })
 })
 
 app.post('/submit', (req, res) => {
-    console.log("Req Body line 23", req.body, "Whole blog list", blogList)
+    // console.log("Req Body line 23", req.body, "Whole blog list", blogList)
     createPostObject(req)
     res.render("index.ejs", { bList: blogList })
 })
 
 app.post('/trash', (req, res) => {
     removePostObject(req)
-    res.render("index.ejs", { bList: blogList })
+    res.render("index", { bList: blogList })
 })
 
 app.listen(port, () => {
