@@ -24,8 +24,18 @@ app.get('/addblog', (req, res) => {
 
 app.post('/submit', (req, res) => {
     // console.log("Req Body line 23", req.body, "Whole blog list", blogList)
-    createPostObject(req)
-    res.render("index.ejs", { bList: blogList })
+    // createPostObject(req)
+
+    let newRow = {}
+    newRow = req.body
+    console.log("new row", newRow)
+    console.log("blog list", blogList)
+    const addBlog = [newRow, ...blogList]
+    // console.log(addBlog)
+    // blogList.unshift(newRow)
+    blogList = addBlog
+    console.log("blog list after unshift", blogList)
+    res.render("index.ejs", { bList: addBlog })
 })
 
 app.post('/trash', (req, res) => {
@@ -40,10 +50,11 @@ app.listen(port, () => {
 function createPostObject(req) {
     let newRow = {}
     newRow = req.body
-    let addBlog = [...blogList]
+    console.log(blogList)
+    // let addBlog = [...blogList]
     // console.log(addBlog)
-    addBlog.unshift(newRow)
-    blogList = addBlog
+    blogList.unshift(newRow)
+    // blogList = addBlog
     // console.log(blogList)
 
 }

@@ -21,9 +21,13 @@
 
             <div class="post-list">
                 <a href="/addblog">Enter Blog</a>
-                <% if(bList) { %>
-                    <% console.log(bList) %>
-                        <% } %>
+                <% bList.forEach(b=> { %>
+                    <% if(bList.length>0) { %>
+                        <p>Here is a blog post</p>
+                        <%- include("partials/card.ejs", {blog: b}) %>
+                            <% } %>
+                                <% }) %>
+
             </div>
         </div>
 
