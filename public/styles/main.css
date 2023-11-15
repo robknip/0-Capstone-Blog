@@ -137,6 +137,19 @@ footer {
     list-style: none;
     padding: 0;
 }
+/* .footer-list button {
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 5px; */
+/* } */
+.button-heart {
+    
+    border: 1px solid gray;
+}
+.button-heart button {
+    padding:0;
+}
 .footer-list li:first-of-type {
 margin-right:10px;
 }

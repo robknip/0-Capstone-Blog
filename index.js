@@ -24,7 +24,7 @@ app.get('/addblog', (req, res) => {
 })
 
 app.post('/submit', (req, res) => {
-    console.log("Req Body line 23", req.body, "Whole blog list", blogList)
+    // console.log("Req Body line 23", req.body, "Whole blog list", blogList)
 
     let newRow = {}
     newRow = req.body
